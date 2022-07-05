@@ -1,0 +1,85 @@
+using System;
+using System.Text;
+using System.Threading.Tasks;
+namespace seis
+{
+    using System;
+    class Pila
+    {
+
+        private int TOP;
+
+        private int[]N;
+
+        public Pila(int size)
+        {
+            TOP = 0;
+            N = new int[size];
+        }
+        public void push(int x)
+        {
+            //Algoritmo de insertar(1)
+            if (TOP == N.Length)
+            {
+                Console.WriteLine("Pila llena");
+                return;
+            }
+            N[TOP] = x;
+            TOP = TOP + 1;
+            return;
+        }
+        //Termina(1)
+        //Algoritmo para borrar(2)
+        public int POP()
+        {
+
+            if (TOP == 0)
+            {
+
+                Console.WriteLine("Pila Vacia");
+                return 0;
+            }
+            else
+            {
+                TOP = TOP - 1;
+
+                return (N[TOP + 1]);
+            }
+        } //Termina(2)
+        public bool Full()
+        {
+
+            return TOP == N.Length;
+
+        }
+
+        public bool Empty()
+        {
+
+            return TOP == 0;
+
+        }
+
+
+
+        public int GetNun()
+        {
+            return TOP;
+        }
+    }
+    class Estructuras
+    {
+        public static void Main(string[] args)
+        {
+            Pila s1 = new Pila(10);
+            s1.push(0);
+            s1.push(2);
+            s1.push(3);
+            Console.WriteLine("Saca valores de la pila");
+            Console.WriteLine("Valor 1: " + s1.POP());
+            Console.WriteLine("Valor 2: " + s1.POP());
+            Console.WriteLine("Valor 3: " + s1.POP());
+            Console.ReadKey();
+        }
+    }
+}

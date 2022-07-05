@@ -1,0 +1,115 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace seis
+{
+    using System;
+    class Pila
+    {
+
+        private int TOP;
+
+        private int [] S;
+
+        public Pila(int size)
+        {
+
+            TOP = 0;
+
+             S = new int[size];
+
+        }
+
+        public void push(int x)
+        {
+
+            if (TOP == S.Length)
+            {
+
+                Console.WriteLine("Pila llena");
+
+                return;
+
+            }
+
+            S[TOP] = x;
+
+            TOP++;
+        }
+
+        public int POP()
+        {
+
+            if (TOP == 0)
+            {
+
+                Console.WriteLine("Pila Vacia");
+                return 0;
+            }
+            else
+            {
+                TOP--;
+
+                return (S[TOP++]);
+            }
+        }
+            public bool Full()
+            {
+
+                return TOP == S.Length;
+
+            }
+
+            public bool Empty()
+            {
+
+                return TOP == 0;
+
+            }
+
+            public int Capacidad()
+            {
+
+                return S.Length;
+
+            }
+
+            public int GetNun()
+            {
+
+                return TOP;
+
+            }
+
+        }
+
+        class Estructuras
+        {
+
+            public static void Main(string[] args)
+            {
+
+                Pila s1 = new Pila(10);
+
+                s1.push(4);
+
+                s1.push(3);
+
+                s1.push(2);
+
+                Console.WriteLine("Saca valores de la pila");
+
+                Console.WriteLine("Valor 1: " + s1.POP());
+
+                Console.WriteLine("Valor 2: " + s1.POP());
+
+                Console.WriteLine("La Capacidad de la pila es: " + s1.Capacidad());
+
+                Console.ReadKey();
+            }
+
+        }
+
+    }

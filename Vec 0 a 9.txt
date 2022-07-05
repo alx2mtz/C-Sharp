@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ejercicio_1_02
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] vec = new int[10];
+            int x;
+
+            int [,] mat = new int[3,3];
+            mat[0, 0] = 0;
+
+            for (x = 0; x < 10; x++)
+            {
+                vec[x] = x;
+            }
+
+            for (x = 0; x < 10; x++)
+            {
+
+                if (vec[x] == 1)
+                {
+                    Console.WriteLine();
+                }
+                if (vec[x] == 3)
+                {
+                    Console.WriteLine();
+                }
+                if (vec[x] == 6)
+                {
+                    Console.WriteLine();
+                }
+                Console.Write(vec[x] + " ");
+            }
+            Console.ReadKey();
+        }
+    }
+}

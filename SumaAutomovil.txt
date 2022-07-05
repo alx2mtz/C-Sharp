@@ -1,0 +1,75 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Examen
+{
+  
+    public class TransporteTerrestre {
+        protected int valor1;
+        protected int valor2;
+        protected int resultado;
+
+        public int Valor1 
+        {
+            set 
+            {
+                valor1=value;
+            }
+            get
+            {
+                return valor1;
+            }
+        }
+
+        public int Valor2 
+        {
+            set 
+            {
+                valor2=value;
+            }
+            get
+            {
+                return valor2;
+            }
+        }
+
+        public int Resultado
+        {
+            protected set 
+            {
+               resultado=value;
+            }
+            get
+            {
+                return resultado;
+            }
+        }        
+    }
+    public class AutomovilCompacto: TransporteTerrestre
+    {
+        public void Operar() 
+        {
+            Resultado=Valor1+Valor2;
+        }
+    }
+
+    class Prueba
+    {
+        static void Main(string[] args)
+        {
+            AutomovilCompacto compacto = new AutomovilCompacto();
+            Console.WriteLine("Cunato recorrio el Automovi?");
+            Console.WriteLine("Del punto A al B");
+            compacto.Valor1 = Convert.ToInt16(Console.ReadLine());
+            Console.WriteLine("Ddel putno B al C");
+            compacto.Valor2 = Convert.ToInt16(Console.ReadLine());
+            compacto.Operar();
+            Console.WriteLine("Primero reccorrio " + compacto.Valor1 + " Despues " + 
+            compacto.Valor2 + " y en total recorrio " + compacto.Resultado);
+
+            Console.ReadKey();
+        }
+    }
+}

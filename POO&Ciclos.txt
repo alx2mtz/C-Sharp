@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+namespace PruebaConstructor1
+{
+class Operarios
+    {     
+  private int[] Num;
+    public Operarios()
+        {
+      Num=new int[5]; 
+  for(int f = 0; f < Num.Length; f++) 
+    {
+     Console.Write("Ingrese un numero:");
+            string linea = Console.ReadLine();
+          Num[f]=int.Parse(linea);
+    }	   
+  }     
+   public void Imprimir() 
+        {
+      for(int f = 0; f < Num.Length; f++)
+            {
+            Console.WriteLine(Num[f]);
+      }
+            Console.ReadKey();
+        }
+  static void Main(string[] args)
+        {
+        Operarios op = new Operarios();
+     op.Imprimir();
+        }
+   }
+}

@@ -1,0 +1,96 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace seis
+{
+    using System;
+    class Fila
+    {
+
+        private int R;
+        private int F;
+        private int [] Q;
+
+        public int y { get; private set; }
+
+        public Fila(int size)
+        {
+            R = 0;
+             Q = new int[size];
+        }
+        public void push (int y)
+        {
+            //Algoritmo de insertar(3)
+            if (R >= Q.Length)
+            {
+                Console.WriteLine("Filalena");
+                return;
+            }
+            R = R + 1;
+            Q[R] = y;
+            if (F==0) {
+                F = 1;
+                return;
+               
+            }
+        }
+        //Termina(1)
+        //Algoritmo para borrar(2)
+        public int POP()
+        {
+
+            if (F == 0)
+            {
+                Console.WriteLine("Fila Vacia");
+                return 0;
+            }
+            else
+            {
+                
+                y=Q[F];
+            }
+            if (F == R)
+            {
+                R = 0;
+                F = R;
+            }
+            else {
+                F= F + 1;
+            }
+            return (y);
+        } //Termina(2)
+            public bool Full()
+            {
+
+                return R == Q.Length;
+
+            }
+            public bool Empty()
+            {
+
+                return R == 0;
+
+            }
+            public int GetNun()
+            {
+                return R;
+            }
+        }
+        class Imprime
+        {
+            public static void Main(string[] args)
+            {
+                Fila s1 = new Fila(10);
+                s1.push(0);
+                s1.push(2);
+                s1.push(3);
+                Console.WriteLine("Saca valores de la Fila");
+                Console.WriteLine("Valor 1: " + s1.POP());
+                Console.WriteLine("Valor 2: " + s1.POP());
+                Console.WriteLine("Valor 3: " + s1.POP());
+                Console.ReadKey();
+        }
+        }
+        }

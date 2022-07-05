@@ -1,0 +1,42 @@
+using System;
+
+public class basicmath{
+  
+public int a,b,c,d,e;
+ 
+ public basicmath(){
+    
+a=1+1;
+  
+b=a*3;
+  
+ c=b/4;
+  
+d=c-a; 
+ 
+e=-d;
+ 
+ }
+
+}
+
+class MainClass {
+ 
+ public static void Main (string[] args) {
+
+ 
+   basicmath asd = new basicmath();
+ .
+   Console.WriteLine(asd.a);
+  
+  Console.WriteLine(asd.b);
+    
+Console.WriteLine(asd.c);
+   
+ Console.WriteLine(asd.d);
+    
+Console.WriteLine(asd.e);
+  
+}
+
+}

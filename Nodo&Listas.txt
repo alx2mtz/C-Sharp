@@ -1,0 +1,131 @@
+using System;
+
+using System.Collections.Generic;
+
+using System.Linq;
+
+using System.Text;
+
+using System.Threading.Tasks;
+
+
+namespace Nodos_y_Listas
+
+{
+    
+class Node
+   
+ {
+     
+   public int data;
+    
+    public Node nextNode;
+
+     
+   public Node(int x)
+   
+     {
+       
+    data = x;
+            
+nextNode = null;
+
+        }
+   
+ }
+
+
+    class Lista
+    
+{
+        
+public Node First, Last;
+        
+public string nombre;
+
+       
+ public Lista(string cadena)
+       
+ {
+           
+ nombre = cadena;
+        
+    First = Last = null;
+       
+ }
+
+      
+  public void insertarNodoPrincipio(int inserItem)
+        {
+            
+if (isEmpty())
+             
+   First = Last = new Node(inserItem);
+       
+     else
+       
+    First = First.nextNode = new Node(inserItem);
+      
+  }
+
+    
+    public void insertarNodoFinal(int inserItem)
+     
+   {
+          
+  if (isEmpty())
+     
+           First = Last = new Node(inserItem);
+   
+         else
+          
+      Last = Last.nextNode = new Node(inserItem);
+   
+     }
+
+     
+   public bool isEmpty() // ve si la lista esta vacia
+  {
+           
+ return First == null;
+    
+    }
+
+       
+ public void imprimeLista()
+       
+ {
+           
+ Console.WriteLine(First.data);
+            
+Console.WriteLine(Last.data);
+        
+}
+
+        
+public static void Main(string[] args)
+        
+{
+           
+ Lista objeto = new Lista("Esta es una lista");
+            
+objeto.insertarNodoFinal(7);
+
+            
+objeto.insertarNodoFinal(8);
+
+           
+ objeto.insertarNodoPrincipio(5);
+
+            
+objeto.imprimeLista();
+
+            
+Console.ReadKey();
+       
+ }
+
+    }
+
+
+}

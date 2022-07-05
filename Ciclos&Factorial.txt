@@ -1,0 +1,118 @@
+using System;
+ 
+namespace lol
+{
+
+class cinco 
+{
+
+   public void HolaMundo(int n)
+{
+
+    if (n>0)
+
+       {
+
+     Console.WriteLine("Hola mundo");
+  
+         HolaMundo(n-1);
+  
+     }
+  
+ }   
+   
+ 
+  class funcion
+  
+ {
+       
+public int F(int n)
+      
+ {
+    
+        
+   int resultado;
+     
+      if (n==0)
+{
+           
+    return 0;
+    
+       }
+        
+   resultado =2* F(n-1)+n*n;
+    
+       return resultado;
+    
+   }
+  
+ }
+    
+    
+class Factorial
+    
+{
+      
+  public int factR(int n)
+   
+     {
+        
+    int resultado;
+       
+    
+            if(n==1)
+{
+             
+   return 1;
+         
+   }
+         
+   resultado =factR(n-1)*n;
+         
+   return resultado;
+      
+  }
+   
+ }
+  
+static void Main() 
+{
+
+  Factorial f=new Factorial();
+  
+
+Console.WriteLine("Factorial usando metodo recursivo");
+  
+Console.WriteLine("Factorial de 3 es "+f.factR(3));
+
+Console.WriteLine("Factorial de 4 es "+f.factR(4));
+ 
+Console.WriteLine("Factorial de 5 es "+f.factR(5));
+
+Console.WriteLine();
+ 
+
+Console.WriteLine("Factorial usando metodo recursivo");
+  
+Console.WriteLine("Factorial de 3 es "+f.factR(3));
+  
+Console.WriteLine("Factorial de 4 es "+f.factR(4));
+  
+Console.WriteLine("Factorial de 5 es "+f.factR(5));
+  
+Console.WriteLine();
+  
+  
+  
+
+
+cinco lel = new cinco();
+Console.WriteLine();
+lel.HolaMundo(5);
+Console.WriteLine();
+  
+}
+
+ }
+
+  }

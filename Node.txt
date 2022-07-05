@@ -1,0 +1,55 @@
+using System; 
+
+
+namespace TUGFA
+{
+ 
+   class node 
+    {
+  
+   public int data;
+  
+   public node nextnode;
+    
+
+     public node(int x)
+     {
+    
+    data=x;
+    
+    nextnode=null;
+ 
+    }
+       
+ public static void Main()
+   
+     {
+     
+       //creamos a first
+        
+    
+            node first=new node(20);
+         
+   Console.WriteLine();
+      
+      Console.WriteLine("Recuperar a first: ");
+         
+   Console.WriteLine();
+       
+     Console.WriteLine("Direccion de first: " + first);
+         
+   Console.WriteLine();
+            
+Console.WriteLine("Valor info de first: "+ first.data);
+         
+   Console.WriteLine();
+     
+       Console.WriteLine("Valor nextnode de first: "+first.nextnode);
+       
+     Console.WriteLine();
+      
+      }
+ 
+   }
+
+}

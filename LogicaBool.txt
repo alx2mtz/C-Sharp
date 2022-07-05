@@ -1,0 +1,20 @@
+using System;
+public class BoolLogic{
+ public bool a,b,c,d,e;
+ public BoolLogic(){
+   a=true;
+   b=false;
+ }
+}
+class MainClass {
+ public static void Main (string[] args) {
+   BoolLogic lol = new BoolLogic();
+   Console.WriteLine ("a = "+ lol.a);
+   Console.WriteLine ("b = "+ lol.b);
+   Console.WriteLine ("a || b = "+ (lol.a || lol.b));
+   Console.WriteLine ("a && b = "+ (lol.a && lol.b));
+   Console.WriteLine ("a ^ b = "+ (lol.a ^ lol.b));
+   Console.WriteLine ("(!a && b) || (a && !b) = "+ ((!lol.a && lol.b)||(lol.a && !lol.b)));
+   Console.WriteLine ("!a = "+ !lol.a);
+ }
+}

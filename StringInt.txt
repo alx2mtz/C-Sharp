@@ -1,0 +1,36 @@
+using System;
+class person {
+     
+ public string name;
+     
+ public int age;
+      
+public person(string n, int a){
+      
+    name=n;
+         
+ age=a;
+      }
+    
+  public void printperson(){
+          
+Console.WriteLine("Hi,my name is "+ name );
+          
+Console.WriteLine("I am "+age+ " year old");
+   
+   }
+} 
+class ParmConsDemo{
+   
+   public static void Main (){
+         
+ person p;
+         
+ p=new person ("Luke" , 50);
+          
+p.printperson();
+          
+ 
+     }
+ 
+ }
